@@ -1,0 +1,11 @@
+<%= render 'nav' %>
+<section class="container">
+    <div class="head-wrapper text-center">
+        <h1 class="my-5">Update Project</h1>
+    </div>
+
+    <%= render 'form', project: @project %>
+
+    <%= link_to 'Show', @project %> |
+    <%= link_to 'Back', projects_path %>
+</section>

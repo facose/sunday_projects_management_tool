@@ -1,0 +1,38 @@
+<%= render 'nav'%>
+
+<div class="alert alert-success" role="alert">
+  <div class="container text-center">
+  
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @project.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @project.description %>
+    </p>
+
+    <p>
+      <strong>Started at:</strong>
+      <%= @project.started_at %>
+    </p>
+
+    <p>
+      <strong>Ended at:</strong>
+      <%= @project.ended_at %>
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      <%= @project.status %>
+    </p>
+
+  </div>
+</div>
+<div class="container text-center">
+<%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-warning px-4' %>
+<%= link_to 'Home', projects_path, class: 'btn btn-warning px-3' %>
+</div>

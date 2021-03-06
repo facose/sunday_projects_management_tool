@@ -1,0 +1,38 @@
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'field form-control' %>
+    <br>
+
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'field form-control' %>
+    <br>
+
+    <%= form.label :started_at %>
+    <%= form.date_field :started_at, class: 'field form-control' %>
+    <br>
+
+    <%= form.label :ended_at %>
+    <%= form.date_field :ended_at, class: 'field form-control' %>
+    <br>
+
+    <%= form.label :status %>
+    <%= form.select :status, [['Proposed', :proposed], ['In Progress', :in_progress], ['Finished', :finished]], {}, class:'form-control'%>
+    <br>
+
+    <div class="">
+    <%= form.submit class: 'btn btn-warning py-2 px-3', value: 'Submit' %>
+    </div>
+
+<% end %>
