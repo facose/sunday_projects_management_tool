@@ -6,7 +6,7 @@
   <div>
     <form class="form-inline my-2">
       <%= form_with url: "projects/index", method: :get, class: "form-inline" do |form| %>
-        <%= form.select :status, [["All", :all], ["Proposed", :proposed], ["In Progress", :in_progress], ["Finished", :finished]], {selected: params[:status]}, class: "form-control mr-sm-2 filter" %>
+        <%= form.select :status, [["All", :all], ["Proposed", :proposed], ["In Progress", :in_progress], ["Finished", :finished]], {selected: params[:status]}, class: "form-control mr-2 filter my-2" %>
         <%= form.submit "Search", class: 'btn btn-warning' %>
       <% end %>
     </form>
@@ -44,7 +44,7 @@
             <td><%= project.started_at %></td>
             <td><%= project.ended_at %></td>
             <td><%= project.status %></td>
-            <td>
+            <td class="edit">
               <%= link_to(edit_project_path(project)) do%>
               <i class="fas fa-pen"></i>
               <% end %>

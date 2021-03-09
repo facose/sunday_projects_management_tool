@@ -37,3 +37,12 @@ nav {
 .filter {
     width: 60%;
 }
+
+.navbar-brand:hover {
+    background-color: #f8f9fa;
+}
+
+a {
+    color: white;
+    background-color: white;
+}

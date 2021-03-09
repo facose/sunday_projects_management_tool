@@ -4,6 +4,9 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+    if params[:status] and params[:status] != 'all'
+      @projects = @projects.where(status: params[:status])
+    end 
   end
 
   # GET /projects/1 or /projects/1.json

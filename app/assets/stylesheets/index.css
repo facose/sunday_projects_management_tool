@@ -22,6 +22,7 @@ i {
 
 .fa-pen:hover, .fa-trash:hover {
     color: #FF9107;
+    cursor: pointer;
 }
 
 .create {
@@ -30,6 +31,15 @@ i {
 
 .mobile-wrapper {
     width: 100%;
+}
+
+.edit {
+    color: white;
+    background-color: white;
+}
+
+.edit:hover {
+    background-color: white;
 }
 
 @media only screen and (min-width: 300px) {
